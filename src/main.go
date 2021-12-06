@@ -15,9 +15,14 @@ var (
 
 func main() {
 	// variables
-	var i int = 42
-	fmt.Println(i)
-	i = 13
+	a := 10
+	b := 3
 
-	fmt.Println(i)
+	fmt.Println(a & b)
+	fmt.Println(a | b)
+	fmt.Println(a ^ b)
+	fmt.Println(a &^ b)
+	a = 8
+	fmt.Println(a << b)
+	fmt.Println(a >> b)
 }
