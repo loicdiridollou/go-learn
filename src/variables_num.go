@@ -9,6 +9,8 @@ func main() {
 	a := 10.2
 	b := 3.7
 
+	fmt.Printf("%.2f\n", i)
+
 	fmt.Printf("%v, %T", i, i)
 	fmt.Println(a + b)
 	fmt.Println(a - b)
