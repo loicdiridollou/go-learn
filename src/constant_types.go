@@ -26,6 +26,7 @@ func main() {
 	// var specialistType int = dogSpecialist
 	// fmt.Printf("%v", dogSpecialist == specialistType)
 	fileSize := 4000000000.
-	fmt.Printf("%.2f", fileSize)
+
+	fmt.Printf("%.2fGB", fileSize/GB)
 
 }
