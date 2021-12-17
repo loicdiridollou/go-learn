@@ -34,4 +34,8 @@ func main() {
 
 	c := make([]int, 3)
 	fmt.Println(c)
+
+	c = append(c, 1)
+	fmt.Println(c)
+
 }
