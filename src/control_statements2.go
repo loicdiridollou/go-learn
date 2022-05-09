@@ -35,7 +35,7 @@ func sqrt() {
 	}
 }
 
-func main() {
+func switch_example() {
 	i := 10
 	switch {
 	case i <= 10:
@@ -45,6 +45,21 @@ func main() {
 		fmt.Println("two")
 	default:
 		fmt.Println("not one or two")
+	}
+
+}
+
+func main() {
+	var i interface{} = 10
+	switch i.(type) {
+	case int:
+		fmt.Println("one")
+	case float64:
+		fmt.Println("two")
+	case string:
+		fmt.Println("not one or two")
+	default:
+		fmt.Println("Default case")
 	}
 
 }
