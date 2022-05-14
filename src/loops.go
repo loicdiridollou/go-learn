@@ -13,14 +13,23 @@ func old() {
 	}
 }
 
-func main() {
+func old_continue() {
 	i := 0
-	for {
-		fmt.Println(i)
+	for ; i < 10; i++ {
+
 		i++
-		if i == 10 {
-			break
+		if i%2 == 0 {
+			continue
 		}
+		fmt.Println(i)
 	}
 	fmt.Println(i)
+}
+
+func main() {
+	s := []int{1, 2, 3}
+	for _, v := range s {
+		fmt.Println(v)
+	}
+
 }
