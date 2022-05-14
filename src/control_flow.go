@@ -13,7 +13,7 @@ func old1() {
 	fmt.Println("end")
 }
 
-func main() {
+func old2() {
 	res, err := http.Get("http://www.google.com/robots.txt")
 	if err != nil {
 		log.Fatal(err)
@@ -25,4 +25,21 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("%s", robots)
+}
+
+func main() {
+	fmt.Println("Start")
+	panicker()
+	fmt.Println("End")
+}
+
+func panicker() {
+	fmt.Println("about to panic")
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println("Error: ", err)
+		}
+	}()
+	panic("Something bad happened")
+	fmt.Println("Done panicking")
 }
