@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	myInt := IntCounter(0)
 	var inc Incrementer = &myInt
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 100; i++ {
 		fmt.Println(inc.Increment())
 	}
 }
