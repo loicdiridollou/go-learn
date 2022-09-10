@@ -7,7 +7,11 @@ import (
 
 func main() {
 	fmt.Println("vim-go")
-	go sayHello()
+	var msg = "Hello world!"
+	go func(msg string) {
+		fmt.Println(msg)
+	}(msg)
+	msg = "Goodbye"
 	time.Sleep(100 * time.Millisecond)
 }
 
